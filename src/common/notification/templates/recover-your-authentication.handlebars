@@ -1,0 +1,400 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN' 'http://www.w3.org/TR/html4/loose.dtd'>
+<html lang='pt-br'>
+
+<head>
+
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+    <meta name='viewport' content='width=device-width, user-scalable=no'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta content='telephone=no' name='format-detection'>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            color: #303030;
+            line-height: 1.3;
+            background: #FFFFFF;
+        }
+
+        td,
+        body,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+        }
+
+        .img img,
+        table {
+            width: 100%;
+        }
+
+        center {
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        .white {
+            background: #FFFFFF
+        }
+
+        .header__rocket {
+            width: 100%;
+            padding: 0 40px;
+            max-width: 112px;
+        }
+
+        .header__rocket.suspension {
+            max-width: 237px;
+        }
+
+        .header__rocket.reactived {
+            max-width: 200px;
+        }
+
+        .header__rocket.launch,
+        .header__rocket.canceled {
+            width: auto;
+            margin-bottom: 15px;
+        }
+
+        .header__block {
+            font-size: 0;
+            padding: 50px 50px 30px;
+        }
+
+        @media (max-width: 480px) {
+            .header__block {
+                padding: 20px;
+            }
+        }
+
+        .footer__block {
+            padding: 0px 50px 50px 50px;
+        }
+
+        .footer__lovetext {
+            font-size: 12px;
+            color: #869699;
+        }
+
+        .footer__social {
+            height: 16px;
+            color: #343AF8;
+            margin: 50px 15px;
+            display: inline-block;
+        }
+
+        .footer__social svg {
+            width: 100%;
+            color: currentColor;
+        }
+
+        .main-title__text {
+            font-size: 32px;
+            padding: 0 50px;
+            margin: 0 0 8px;
+        }
+
+        .main-title__cell.primary .main-title__text {
+            color: #343AF8;
+        }
+
+        .main-title__cell.danger .main-title__text {
+            color: #343AF8;
+        }
+
+        .title {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        .subtitle {
+            display: block;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 23px;
+        }
+
+        .subtitle.primary {
+            color: #343AF8;
+        }
+
+        .text {
+            color: #38405E;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .text--primary {
+            font-size: 15px;
+            color: #343AF8;
+        }
+
+        .text--danger {
+            color: #343AF8;
+        }
+
+        .text--sm {
+            font-size: 12px;
+        }
+
+        .text--center {
+            text-align: center;
+        }
+
+        .link {
+            font-size: 16px;
+            color: #303030;
+            display: inline-block;
+            word-break: break-word;
+        }
+
+        hr {
+            border: 0;
+            height: 4px;
+            margin: 30px 0;
+            background-color: #F4F4F4;
+        }
+
+        .info-table,
+        .info-table--plan {
+            border-radius: 10px;
+            background-color: #f5f7f7;
+        }
+
+        .info-table {
+            padding: 25px;
+            margin-top: 20px;
+        }
+
+        .info-table--plan {
+            padding: 5px;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            margin-left: -5px;
+            margin-bottom: 10px;
+        }
+
+        .orange-line {
+            width: 40px;
+            height: 4px;
+            background-color: #ffc200
+        }
+
+        .container__block {
+            width: 100%;
+            text-align: left;
+            padding: 0 50px 50px;
+        }
+
+        .img img {
+            max-width: 500px
+        }
+
+        .btn {
+            font-size: 15px;
+            color: #FFFFFF;
+            font-weight: 500;
+            text-align: center;
+            padding: 18px 35px;
+            border-radius: 10px;
+            display: inline-block;
+            background: #343AF8;
+            text-decoration: none !important;
+        }
+
+        .btn.dark {
+            margin-top: 15px;
+            border-radius: 100px;
+            background: #303030;
+        }
+
+        .stock-table {
+            font-size: 13px;
+        }
+
+        .stock-table__head {
+            font-size: 15px;
+            padding: 10px 20px;
+            border-bottom: solid 2px #ffc200;
+        }
+
+        .stock-table td {
+            border-bottom: solid 1px #eceff0;
+        }
+
+        .stock-table__attribute,
+        .stock-table__title {
+            color: #697476;
+            padding-left: 20px;
+        }
+
+        .stock-table__attribute a,
+        .stock-table__title a {
+            color: #697476;
+        }
+
+        .stock-table__attribute {
+            font-size: 12px;
+        }
+
+        .table-grid__grid2,
+        .table-grid__mosaic2 {
+            width: 100%;
+            max-width: 140px;
+            vertical-align: top;
+            display: inline-block;
+        }
+
+        .table-grid__mosaic2 {
+            max-width: 200px;
+        }
+
+        .table-product {
+            padding: 25px 0;
+        }
+
+        .table-product p {
+            margin: 3px;
+        }
+
+        b.danger {
+            color: #343AF8;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <center class='white'>
+        <table class='header'>
+            <tr>
+                <td class='header__block' align='center'>
+                    <img class='header__logo' src='https://crm-assets-images.s3.amazonaws.com/bagy/img/logo.png'
+                        style='width: 160px' alt='Agenda-se.io'>
+                </td>
+            </tr>
+        </table>
+
+
+        <table class='container' cellspacing='0'>
+            <tr>
+                <td align='center' valign='top' class='container__block'>
+                    <hr>
+
+                    <p class='text'>
+                        Para redefinir sua senha clique no botão abaixo:
+                    </p>
+
+
+                    <a class='link'
+                        href='https://agendase.io/recovery/{{access_token}}?email={{email}}'>https://agendase.io/recovery/{{access_token}}?email={{email}}</a>
+
+                    <br>
+                    <br>
+
+                    <p class='text'>
+                        Ignore este e-mail caso não tenha solicitado a recuperação da senha.
+                    </p>
+
+                    <br>
+
+                    <p class='subtitle primary'>Equipe de atendimento</p>
+
+                    <p class='text'>
+                        <b>Nossa equipe está pronta para te ajudar no que for preciso!</b><br><br>
+                        Fale conosco através do menu <b>Ajuda</b> do seu painel, atuamos de segunda
+                        a sábado, das <b>09h</b> às <b>12h</b> e das <b>13:30h</b> às <b>18h</b>.
+                    </p>
+
+                    <hr>
+
+                    <div>
+                        <center style='font-size:70%'>
+                            <em>Para dúvidas financeiras, entre em contato com <b>financeiro@agenda-se.io</b></em>
+                        </center>
+                        <br>
+                        <a href='https://bagy.gitbook.io/base-de-conhecimento-bagypro' target='_blank'>
+                            <img src='https://crm-assets-images.s3.amazonaws.com/bagy/img/central-de-ajuda.png' />
+                        </a>
+                    </div>
+
+                    <hr>
+                </td>
+            </tr>
+        </table>
+    </center>
+
+    <table class='footer'>
+
+        <tr>
+            <td align='center' class='footer__block'>
+                <a href='https://www.instagram.com/bagyapp/' class='footer__social' target='_blank'>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8V8Z"
+                            stroke="#303030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M6 9H2V21H6V9Z" stroke="#303030" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z"
+                            stroke="#303030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+
+                <a href='https://www.facebook.com/bagyapp/' class='footer__social' target='_blank'>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M17 2H7C4.23858 2 2 4.23858 2 7V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V7C22 4.23858 19.7614 2 17 2Z"
+                            stroke="#303030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4078 15.9059C10.5771 15.7723 9.80976 15.3801 9.21484 14.7852C8.61991 14.1902 8.22773 13.4229 8.09406 12.5922C7.9604 11.7615 8.09206 10.9099 8.47032 10.1584C8.84858 9.40685 9.45418 8.79374 10.201 8.40624C10.9478 8.01874 11.7978 7.87658 12.63 8C13.4789 8.12588 14.2648 8.52146 14.8717 9.1283C15.4785 9.73515 15.8741 10.5211 16 11.37Z"
+                            stroke="#303030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M17.5 6.5H17.51" stroke="#303030" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </a>
+
+                <a href='https://www.linkedin.com/company/bagyapp/about/' class='footer__social' target='_blank'>
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12.4807 16.8404C14.6898 16.8404 16.4807 15.0495 16.4807 12.8404C16.4807 10.6312 14.6898 8.84036 12.4807 8.84036C10.2716 8.84036 8.48069 10.6312 8.48069 12.8404C8.48069 15.0495 10.2716 16.8404 12.4807 16.8404Z"
+                            stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M16.4807 8.84035V13.8404C16.4807 14.636 16.7968 15.3991 17.3594 15.9617C17.922 16.5243 18.685 16.8404 19.4807 16.8404C20.2763 16.8404 21.0394 16.5243 21.602 15.9617C22.1646 15.3991 22.4807 14.636 22.4807 13.8404V12.8404C22.4805 10.5834 21.7169 8.39283 20.314 6.62488C18.911 4.85694 16.9512 3.61558 14.7533 3.10265C12.5554 2.58972 10.2486 2.83539 8.20804 3.79972C6.16745 4.76404 4.51309 6.39031 3.51395 8.41408C2.51481 10.4378 2.22966 12.7401 2.70486 14.9465C3.18006 17.1528 4.38767 19.1336 6.13132 20.5666C7.87497 21.9997 10.0521 22.8007 12.3088 22.8395C14.5654 22.8783 16.7688 22.1526 18.5607 20.7804"
+                            stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+
+                <br>
+
+                <p class='footer__lovetext'> Feito com
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.84 4.60999C20.3292 4.099 19.7228 3.69364 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69364 13.5708 4.099 13.06 4.60999L12 5.66999L10.94 4.60999C9.90831 3.5783 8.50903 2.9987 7.05 2.9987C5.59097 2.9987 4.19169 3.5783 3.16 4.60999C2.12831 5.64169 1.54871 7.04096 1.54871 8.49999C1.54871 9.95903 2.12831 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7564 11.2728 22.0329 10.6053C22.3095 9.93789 22.4518 9.22248 22.4518 8.49999C22.4518 7.77751 22.3095 7.0621 22.0329 6.39464C21.7564 5.72718 21.351 5.12075 20.84 4.60999V4.60999Z"
+                            fill="red" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg> em Sorocaba / SP
+                </p>
+                <br>
+
+                <div style='font-size:70%'>
+                    <span>Conheça nosso site: <a href='https://agenda-se.io/'>agenda-se.io</a></span>
+                    <br>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

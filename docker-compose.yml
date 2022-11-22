@@ -1,0 +1,47 @@
+version: '3.3'
+
+services:
+  mysqldb:
+    image: mysql:8.0
+    container_name: mysql_server
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    expose:
+      - '3306'
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_USER: '${DB_USERNAME}'
+      MYSQL_DATABASE: '${DB_NAME}'
+      MYSQL_PASSWORD: '${DB_PASSWORD}'
+    volumes:
+      - mysql:/var/lib/mysql
+    networks:
+      - backend
+
+  api:
+    build: .
+    entrypoint: dockerize -wait tcp://mysqldb:3306 -timeout 20s docker-entrypoint.sh
+    container_name: agenda-se_api
+    command: npm run dev
+    restart: always
+    ports:
+      - '3000:3000'
+      - '9229:9229'
+    env_file:
+      - .env
+    volumes:
+      - ./src:/home/agenda-se/api/src
+      - ./nodemon.json:/home/agenda-se/api/nodemon.json
+    networks:
+      - backend
+    depends_on:
+      - mysqldb
+
+volumes:
+  mysql:
+    driver: local
+
+networks:
+  backend:
+    driver: bridge

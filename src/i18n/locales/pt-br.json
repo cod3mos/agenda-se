@@ -1,0 +1,8 @@
+{
+    "validation_error": "Parâmetros inválidos",
+    "resource_not_found": "Recurso não encontrado",
+    "unauthorized": "Informe um token válido para autenticação",
+    "user_already_exists": "Já existe um cadastro com esses dados",
+    "internal_server_error": "Ocorreu um erro. Estamos trabalhando para resolvê-lo o mais rápido possível",
+    "invalid_credentials_exception": "E-mail ou senha inválidos, verique suas credenciais e tente novamente"
+}

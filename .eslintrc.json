@@ -1,0 +1,33 @@
+{
+    "env": {
+        "node": true,
+        "jest": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "standard-with-typescript",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": "latest",
+        "project": [
+            "./tsconfig.json"
+        ]
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "n/no-path-concat": "off",
+        "n/handle-callback-err": "off",
+        "@typescript-eslint/ban-types": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-extraneous-class": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/no-useless-constructor": "off",
+        "@typescript-eslint/strict-boolean-expressions": "off"
+    }
+}
